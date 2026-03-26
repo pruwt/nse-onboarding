@@ -125,12 +125,12 @@ function CompassIllustration() {
       {/* ── Direction labels ── */}
 
       {/* N — Grow my wealth (teal, active) */}
-      <text x={CX} y={CY - R_OUTER - 16}
+      <text x={CX} y={CY - R_OUTER - 30}
         textAnchor="middle" fontSize="13" fontWeight="600"
         fill="#1D9E75" fontFamily={FONT}>
         Grow my wealth
       </text>
-      <text x={CX} y={CY - R_OUTER - 2}
+      <text x={CX} y={CY - R_OUTER - 16}
         textAnchor="middle" fontSize="11"
         fill="#1D9E75" fontFamily={FONT}>
         Long-term growth
