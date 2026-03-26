@@ -9,7 +9,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/*.png'],
       manifest: {
-        name: 'NSE — Investor Onboarding',
+        name: 'NSE Onboarding',
         short_name: 'NSE Onboarding',
         description: "NSE investor onboarding — start investing in Kenya's capital markets",
         theme_color: '#0D1B2A',
