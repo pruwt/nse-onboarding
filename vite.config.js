@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/*.png'],
       manifest: {
-        name: 'Dosikaa — Investor Onboarding',
-        short_name: 'Dosikaa',
+        name: 'NSE — Investor Onboarding',
+        short_name: 'NSE Onboarding',
         description: "NSE investor onboarding — start investing in Kenya's capital markets",
         theme_color: '#0D1B2A',
         background_color: '#F5F6F4',
