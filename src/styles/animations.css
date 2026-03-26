@@ -1,0 +1,140 @@
+/* Blob float animations */
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate(0, 0); }
+  33%       { transform: translate(-8px, -12px); }
+  66%       { transform: translate(4px, -6px); }
+}
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate(0, 0); }
+  33%       { transform: translate(10px, -8px); }
+  66%       { transform: translate(-4px, -14px); }
+}
+@keyframes blob-float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  33%       { transform: translate(-6px, 8px); }
+  66%       { transform: translate(8px, 4px); }
+}
+@keyframes blob-float-4 {
+  0%, 100% { transform: translate(0, 0); }
+  33%       { transform: translate(5px, -10px); }
+  66%       { transform: translate(-5px, -5px); }
+}
+
+.blob-1 { animation: blob-float-1 8s ease-in-out infinite; will-change: transform; }
+.blob-2 { animation: blob-float-2 10s ease-in-out infinite 2s; will-change: transform; }
+.blob-3 { animation: blob-float-3 12s ease-in-out infinite 4s; will-change: transform; }
+.blob-4 { animation: blob-float-4 9s ease-in-out infinite 1s; will-change: transform; }
+
+/* Splash screen entry animations */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes blob-entry {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.anim-fade-up {
+  animation: fade-up var(--dur-screen) var(--ease-enter) both;
+}
+.anim-fade-up-delay {
+  animation: fade-up var(--dur-screen) var(--ease-enter) 200ms both;
+}
+.anim-fade-in {
+  animation: fade-in var(--dur-base) var(--ease-enter) 400ms both;
+}
+.anim-blob-entry-1 {
+  animation: blob-entry var(--dur-base) var(--ease-enter) both;
+}
+.anim-blob-entry-2 {
+  animation: blob-entry var(--dur-base) var(--ease-enter) 150ms both;
+}
+.anim-blob-entry-3 {
+  animation: blob-entry var(--dur-base) var(--ease-enter) 300ms both;
+}
+
+/* Illustration scale in */
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.anim-scale-in {
+  animation: scale-in var(--dur-screen) var(--ease-enter) 150ms both;
+}
+
+/* Convergence screen */
+@keyframes slide-x-in {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes blob-overshoot {
+  0%   { opacity: 0; transform: scale(0.7); }
+  70%  { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes pill-pop {
+  0%   { opacity: 0; transform: scale(0.8); }
+  70%  { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes headline-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.anim-blob-overshoot-1 { animation: blob-overshoot var(--dur-slow) var(--ease-enter) both; }
+.anim-blob-overshoot-2 { animation: blob-overshoot var(--dur-slow) var(--ease-enter) 150ms both; }
+.anim-blob-overshoot-3 { animation: blob-overshoot var(--dur-slow) var(--ease-enter) 300ms both; }
+.anim-headline { animation: headline-up var(--dur-screen) var(--ease-enter) 200ms both; }
+.anim-checklist-1 { animation: slide-x-in var(--dur-screen) var(--ease-enter) 350ms both; }
+.anim-checklist-2 { animation: slide-x-in var(--dur-screen) var(--ease-enter) 450ms both; }
+.anim-checklist-3 { animation: slide-x-in var(--dur-screen) var(--ease-enter) 550ms both; }
+.anim-pill-pop { animation: pill-pop 300ms var(--ease-enter) 750ms both; }
+
+/* Profile card slide up */
+@keyframes slide-up-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-slide-up { animation: slide-up-in var(--dur-screen) var(--ease-enter) 100ms both; }
+.anim-row-1 { animation: fade-in var(--dur-base) var(--ease-standard) 200ms both; }
+.anim-row-2 { animation: fade-in var(--dur-base) var(--ease-standard) 280ms both; }
+.anim-row-3 { animation: fade-in var(--dur-base) var(--ease-standard) 360ms both; }
+
+/* Review cards stagger */
+.anim-review-1 { animation: fade-up var(--dur-screen) var(--ease-enter) both; }
+.anim-review-2 { animation: fade-up var(--dur-screen) var(--ease-enter) 100ms both; }
+
+/* Checkmark stroke */
+@keyframes draw-check {
+  from { stroke-dashoffset: 30; }
+  to   { stroke-dashoffset: 0; }
+}
+.anim-draw-check {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: draw-check 300ms var(--ease-enter) forwards;
+}
+
+/* Compass needle */
+@keyframes needle-settle {
+  0%   { transform: rotate(180deg); }
+  85%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+.anim-needle {
+  animation: needle-settle var(--dur-slow) var(--ease-enter) 300ms both;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

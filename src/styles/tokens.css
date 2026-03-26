@@ -1,0 +1,34 @@
+:root {
+  /* Colours */
+  --green-dark:      #085041;
+  --green-mid:       #0F6E56;
+  --green-main:      #1D9E75;
+  --green-light:     #5DCAA5;
+  --green-pale:      #9FE1CB;
+  --green-bg:        #E1F5EE;
+  --navy:            #0D1B2A;
+  --red-needle:      #E24B4A;
+  --surface:         #F5F6F4;
+  --white:           #FFFFFF;
+  --text-primary:    #1A1A1A;
+  --text-secondary:  #6B7280;
+  --text-tertiary:   #9CA3AF;
+  --border:          #E5E7EB;
+  --border-active:   #1D9E75;
+  --amber-info:      #F59E0B;
+  --info-bg:         #FFFBEB;
+
+  /* Typography */
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Easing */
+  --ease-enter:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-exit:     cubic-bezier(0.4, 0, 1, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Durations */
+  --dur-fast:   150ms;
+  --dur-base:   250ms;
+  --dur-screen: 350ms;
+  --dur-slow:   600ms;
+}
